@@ -12,9 +12,7 @@
     --teal-deep: #0e433a;
     --teal-soft: #e7f0ec;
     --gold: #b8863a;
-    --gold-soft: #f3e6cd;
     --card: #ffffff;
-    --error: #b5432f;
   }
 
   * { box-sizing: border-box; }
@@ -28,9 +26,9 @@
   }
 
   .wrap {
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto;
-    padding: 0 20px 80px;
+    padding: 0 24px 80px;
   }
 
   .logo-bar {
@@ -50,11 +48,10 @@
     .logo-bar img { max-width: 320px; }
   }
 
-
   header {
     background: linear-gradient(160deg, var(--teal-deep), var(--teal) 70%);
     color: #f6f3ea;
-    padding: 52px 24px 60px;
+    padding: 56px 24px 64px;
     text-align: center;
   }
 
@@ -63,265 +60,131 @@
     display: block;
     height: 6px;
     background: var(--gold);
-    max-width: 720px;
-    margin: 36px auto 0;
+    max-width: 760px;
+    margin: 40px auto 0;
   }
 
   .eyebrow {
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.3em;
     opacity: 0.8;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     text-align: center;
     text-indent: 0.3em; /* 補償 letter-spacing 造成的視覺置中偏移 */
   }
 
   h1 {
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 600;
-    margin: 0 0 12px;
+    margin: 0 0 14px;
     line-height: 1.5;
     text-align: center;
   }
 
   .lede {
-    font-size: 15.5px;
-    max-width: 480px;
+    font-size: 16px;
+    max-width: 520px;
     margin: 0 auto;
     opacity: 0.92;
   }
 
-  /* progress */
-  .progress {
-    display: flex;
-    justify-content: space-between;
-    margin: -28px auto 0;
-    max-width: 720px;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .progress .step {
-    flex: 1;
-    text-align: center;
-  }
-
-  .progress .dot {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
+  section {
     background: var(--card);
-    border: 2px solid var(--line);
-    color: #9b9583;
-    font-size: 13px;
-    margin: 0 auto 6px;
-    font-family: Georgia, serif;
-    transition: all .25s ease;
-  }
-
-  .progress .step.active .dot {
-    background: var(--teal-deep);
-    border-color: var(--teal-deep);
-    color: #fff;
-  }
-
-  .progress .step.done .dot {
-    background: var(--gold);
-    border-color: var(--gold);
-    color: #fff;
-  }
-
-  .progress .label {
-    font-size: 12px;
-    color: #857f6d;
-  }
-
-  .progress .step.active .label { color: var(--teal-deep); font-weight: 600; }
-
-  form-panel { display: block; }
-
-  .panel {
-    background: var(--card);
+    margin-top: -32px;
     border: 1px solid var(--line);
-    margin-top: 24px;
     padding: 40px 36px;
-    display: none;
   }
-
-  .panel.active { display: block; }
 
   h2 {
     font-size: 20px;
     color: var(--teal-deep);
     border-bottom: 2px solid var(--line);
     padding-bottom: 12px;
-    margin: 0 0 24px;
+    margin: 0 0 20px;
   }
-
-  .field {
-    margin-bottom: 22px;
-  }
-
-  .field label {
-    display: block;
-    font-size: 14.5px;
-    margin-bottom: 8px;
-    color: var(--ink);
-  }
-
-  .field label .req {
-    color: var(--error);
-    margin-left: 3px;
-  }
-
-  .field input[type="text"],
-  .field input[type="email"],
-  .field input[type="tel"] {
-    width: 100%;
-    padding: 12px 14px;
-    font-family: inherit;
-    font-size: 15px;
-    border: 1px solid var(--line);
-    background: #fdfcf8;
-    color: var(--ink);
-  }
-
-  .field input:focus {
-    outline: none;
-    border-color: var(--teal);
-    background: #fff;
-  }
-
-  .field .err-msg {
-    display: none;
-    color: var(--error);
-    font-size: 13px;
-    margin-top: 6px;
-  }
-
-  .field.invalid input { border-color: var(--error); }
-  .field.invalid .err-msg { display: block; }
-
-  .agree-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    border: 1px solid var(--line);
-    padding: 18px;
-    background: #fdfcf8;
-  }
-
-  .agree-row input[type="checkbox"] {
-    margin-top: 4px;
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-    accent-color: var(--teal-deep);
-  }
-
-  .agree-row span { font-size: 14.5px; }
 
   .tiers {
     display: grid;
-    gap: 14px;
-  }
-
-  .tier-option {
-    border: 1px solid var(--line);
-    padding: 18px 20px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
-    transition: border-color .15s ease, background .15s ease;
+    margin: 20px 0 8px;
   }
 
-  .tier-option:hover { border-color: var(--teal); }
-
-  .tier-option input[type="radio"] {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--teal-deep);
-    flex-shrink: 0;
+  .tier {
+    border: 1px solid var(--line);
+    padding: 20px 18px;
   }
 
-  .tier-option.selected {
-    border-color: var(--teal-deep);
-    background: var(--teal-soft);
+  .tier.gold { border-top: 4px solid var(--gold); }
+  .tier.teal { border-top: 4px solid var(--teal); }
+
+  .tier .name {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 6px;
   }
 
-  .tier-option .t-name { font-weight: 600; font-size: 16px; }
-  .tier-option .t-fee { font-size: 14px; color: #6b675c; margin-top: 2px; }
-  .tier-option .t-fee b { color: var(--teal-deep); font-size: 17px; }
-
-  .nav-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 32px;
-  }
-
-  button {
-    font-family: inherit;
-    font-size: 15px;
-    padding: 13px 30px;
-    border: none;
-    cursor: pointer;
-    transition: opacity .15s ease;
-  }
-
-  button:hover { opacity: 0.88; }
-
-  .btn-primary {
-    background: var(--teal-deep);
-    color: #fff;
-  }
-
-  .btn-ghost {
-    background: transparent;
+  .tier .fee {
+    font-size: 22px;
     color: var(--teal-deep);
-    border: 1px solid var(--line);
+    font-weight: 600;
   }
 
-  .btn-spacer { visibility: hidden; }
-
-  /* review panel */
-  .review-list {
-    border: 1px solid var(--line);
+  .tier .fee span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #6b675c;
   }
 
-  .review-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 13px 18px;
-    border-bottom: 1px solid var(--line);
-    font-size: 14.5px;
-  }
-
-  .review-row:last-child { border-bottom: none; }
-  .review-row .k { color: #857f6d; flex-shrink: 0; }
-  .review-row .v { text-align: right; font-weight: 600; }
-
-  /* success */
-  .success-panel { text-align: center; padding: 60px 36px; }
-  .success-panel .mark {
-    width: 64px; height: 64px; border-radius: 50%;
-    background: var(--teal-soft); color: var(--teal-deep);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 30px; margin: 0 auto 22px;
-  }
-  .success-panel h2 { border: none; }
-  .success-panel p { color: #4c4a3f; font-size: 15px; }
-
-  .contact-note {
-    margin-top: 24px;
+  .note-box {
     background: #f0ece0;
     border-left: 4px solid var(--gold);
     padding: 16px 18px;
-    font-size: 14px;
-    text-align: left;
+    font-size: 14.5px;
+    margin: 24px 0 0;
+  }
+
+  ul.docs {
+    margin: 0;
+    padding-left: 20px;
+  }
+  ul.docs li { margin-bottom: 6px; }
+
+  .contact-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    font-size: 14.5px;
+  }
+
+  .contact-block div { flex: 1 1 220px; }
+
+  .contact-block .label {
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+  }
+
+  .form-shell {
+    margin-top: 40px;
+    border: 1px solid var(--line);
+    background: var(--card);
+    padding: 8px;
+  }
+
+  .form-shell-title {
+    padding: 16px 20px 8px;
+    font-size: 15px;
+    color: var(--teal-deep);
+  }
+
+  iframe {
+    width: 100%;
+    min-height: 2322px;
+    border: none;
+    display: block;
   }
 
   footer {
@@ -332,11 +195,9 @@
   }
 
   @media (max-width: 560px) {
-    .panel { padding: 28px 20px; }
-    h1 { font-size: 24px; }
-    .progress .label { display: none; }
-    .review-row { flex-direction: column; gap: 4px; }
-    .review-row .v { text-align: left; }
+    .tiers { grid-template-columns: 1fr; }
+    section { padding: 28px 20px; }
+    h1 { font-size: 26px; }
   }
 </style>
 </head>
@@ -352,397 +213,65 @@
   <p class="lede">邀請您的企業加入聯盟，與產、學、研夥伴共同推動智慧醫療照護的落地與發展。</p>
 </header>
 
-<div class="progress" id="progressBar">
-  <div class="step" data-step="1"><div class="dot">1</div><div class="label">確認須知</div></div>
-  <div class="step" data-step="2"><div class="dot">2</div><div class="label">會員方案</div></div>
-  <div class="step" data-step="3"><div class="dot">3</div><div class="label">企業資料</div></div>
-  <div class="step" data-step="4"><div class="dot">4</div><div class="label">聯絡人資料</div></div>
-  <div class="step" data-step="5"><div class="dot">5</div><div class="label">確認送出</div></div>
-</div>
-
 <div class="wrap">
-  <form id="joinForm" novalidate>
 
-    <!-- Step 1 -->
-    <div class="panel active" data-panel="1">
-      <h2>會員服務須知</h2>
-      <p style="font-size:14.5px; color:#4c4a3f;">
-        健康樂活與智慧醫療照護聯盟秘書處由工業技術研究院代理維運，完成申請後，將由工業技術研究院發出入會會費收取通知。
-      </p>
-      <div class="field">
-        <div class="agree-row">
-          <input type="checkbox" id="ackRead" value="我們已詳細閱讀以上資料並瞭解健康樂活與智慧醫療照護聯盟為一年費制會員服務" required>
-          <span>我們已詳細閱讀以上資料並瞭解健康樂活與智慧醫療照護聯盟為一年費制會員服務<span class="req">*</span></span>
-        </div>
-        <div class="err-msg">請先勾選確認已閱讀須知，才能繼續。</div>
+  <section>
+    <h2>會員方案</h2>
+    <p>請於下方申請表中擇一勾選：</p>
+    <div class="tiers">
+      <div class="tier gold">
+        <div class="name">金讚會員</div>
+        <div class="fee">30 萬元 <span>／年</span></div>
       </div>
-      <div class="contact-note">
-        <b>秘書處地址：</b>新竹縣竹東鎮中興路四段 195 號 53 館 236 室 生醫所 健康樂活與智慧醫療照護聯盟秘書處<br>
-        <b>電子郵件：</b>SmartMedHealth@itri.org.tw ／ itriahmci@gmail.com
+      <div class="tier teal">
+        <div class="name">同樂會員</div>
+        <div class="fee">1 萬元 <span>／年</span></div>
       </div>
     </div>
+    <div class="note-box">
+      若尚未確定方案，也可於申請表中選擇「我們還想瞭解更多才能決定」，秘書處將主動與您聯繫說明。
+    </div>
+  </section>
 
-    <!-- Step 2 -->
-    <div class="panel" data-panel="2">
-      <h2>企業擬參加方案</h2>
-      <div class="field">
-        <div class="tiers" id="tierOptions">
-          <label class="tier-option" data-value="我們要參加健康樂活與智慧醫療照護聯盟成為金讚會員">
-            <input type="radio" name="tier" value="我們要參加健康樂活與智慧醫療照護聯盟成為金讚會員" required>
-            <div>
-              <div class="t-name">金讚會員</div>
-              <div class="t-fee">會費 <b>30 萬元</b> ／年</div>
-            </div>
-          </label>
-          <label class="tier-option" data-value="我們要參加健康樂活與智慧醫療照護聯盟成為同樂會員">
-            <input type="radio" name="tier" value="我們要參加健康樂活與智慧醫療照護聯盟成為同樂會員">
-            <div>
-              <div class="t-name">同樂會員</div>
-              <div class="t-fee">會費 <b>1 萬元</b> ／年</div>
-            </div>
-          </label>
-          <label class="tier-option" data-value="我們還想瞭解更多才能決定，請與我們聯絡">
-            <input type="radio" name="tier" value="我們還想瞭解更多才能決定，請與我們聯絡">
-            <div>
-              <div class="t-name">我們還想瞭解更多</div>
-              <div class="t-fee">才能決定，請秘書處與我們聯絡</div>
-            </div>
-          </label>
-        </div>
-        <div class="err-msg">請選擇一項會員方案。</div>
+  <section>
+    <h2>申請時請準備</h2>
+    <ul class="docs">
+      <li>企業名稱、公司統一編號</li>
+      <li>企業負責人姓名</li>
+      <li>企業主要營業處登記地址</li>
+      <li>聯絡人姓名、職稱</li>
+      <li>聯絡人電子郵件地址、行動電話、LINE ID、公司電話</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>秘書處資訊</h2>
+    <p style="font-size:14.5px; margin-top:-8px;">
+      健康樂活與智慧醫療照護聯盟秘書處由工業技術研究院代理維運，完成以下申請表後，將由工業技術研究院發出入會會費收取通知。
+    </p>
+    <div class="contact-block">
+      <div>
+        <div class="label">地址</div>
+        新竹縣竹東鎮中興路四段 195 號 53 館 236 室<br>生醫所 健康樂活與智慧醫療照護聯盟秘書處
+      </div>
+      <div>
+        <div class="label">電子郵件信箱</div>
+        SmartMedHealth@itri.org.tw<br>
+        itriahmci@gmail.com
       </div>
     </div>
+  </section>
 
-    <!-- Step 3 -->
-    <div class="panel" data-panel="3">
-      <h2>企業資料</h2>
-      <div class="field" data-field="companyName">
-        <label>企業名稱<span class="req">*</span></label>
-        <input type="text" name="companyName" required>
-        <div class="err-msg">請填寫企業名稱。</div>
-      </div>
-      <div class="field" data-field="taxId">
-        <label>公司統編<span class="req">*</span></label>
-        <input type="text" name="taxId" inputmode="numeric" required>
-        <div class="err-msg">請填寫 8 位數公司統一編號。</div>
-      </div>
-      <div class="field" data-field="ceoName">
-        <label>企業負責人姓名<span class="req">*</span></label>
-        <input type="text" name="ceoName" required>
-        <div class="err-msg">請填寫企業負責人姓名。</div>
-      </div>
-      <div class="field" data-field="companyAddress">
-        <label>企業主要營業處登記地址<span class="req">*</span></label>
-        <input type="text" name="companyAddress" required>
-        <div class="err-msg">請填寫企業主要營業處登記地址。</div>
-      </div>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="panel" data-panel="4">
-      <h2>聯絡人資料</h2>
-      <div class="field" data-field="contactName">
-        <label>聯絡人姓名<span class="req">*</span></label>
-        <input type="text" name="contactName" required>
-        <div class="err-msg">請填寫聯絡人姓名。</div>
-      </div>
-      <div class="field" data-field="contactTitle">
-        <label>聯絡人職稱<span class="req">*</span></label>
-        <input type="text" name="contactTitle" required>
-        <div class="err-msg">請填寫聯絡人職稱。</div>
-      </div>
-      <div class="field" data-field="contactEmail">
-        <label>聯絡人電子郵件地址<span class="req">*</span></label>
-        <input type="email" name="contactEmail" required>
-        <div class="err-msg">請填寫有效的電子郵件地址。</div>
-      </div>
-      <div class="field" data-field="contactMobile">
-        <label>聯絡人行動電話號碼<span class="req">*</span></label>
-        <input type="tel" name="contactMobile" required>
-        <div class="err-msg">請填寫聯絡人行動電話號碼。</div>
-      </div>
-      <div class="field" data-field="contactLine">
-        <label>聯絡人 LINE ID<span class="req">*</span></label>
-        <input type="text" name="contactLine" required>
-        <div class="err-msg">請填寫聯絡人 LINE ID。</div>
-      </div>
-      <div class="field" data-field="contactPhone">
-        <label>聯絡人公司電話號碼<span class="req">*</span></label>
-        <input type="tel" name="contactPhone" required>
-        <div class="err-msg">請填寫聯絡人公司電話號碼。</div>
-      </div>
-    </div>
-
-    <!-- Step 5 -->
-    <div class="panel" data-panel="5">
-      <h2>確認資訊</h2>
-      <div class="review-list" id="reviewList"></div>
-      <div class="field" style="margin-top:22px;">
-        <div class="agree-row">
-          <input type="checkbox" id="ackConfirm" value="我已確認以上資訊皆正確，並確定提供給健康樂活與智慧醫療照護聯盟做為入會申請、聯繫之用" required>
-          <span>我已確認以上資訊皆正確，並確定提供給健康樂活與智慧醫療照護聯盟做為入會申請、聯繫之用<span class="req">*</span></span>
-        </div>
-        <div class="err-msg">請先勾選確認資訊正確，才能送出申請。</div>
-      </div>
-    </div>
-
-    <div class="nav-row">
-      <button type="button" class="btn-ghost" id="backBtn">上一步</button>
-      <button type="button" class="btn-primary" id="nextBtn">下一步</button>
-    </div>
-  </form>
-
-  <div class="panel" id="successPanel" style="display:none;">
-    <div class="success-panel">
-      <div class="mark">&#10003;</div>
-      <h2>申請已送出</h2>
-      <p>感謝您的申請，秘書處將盡快與您聯繫，並發出入會會費收取通知。</p>
-      <div class="contact-note">
-        <b>秘書處地址：</b>新竹縣竹東鎮中興路四段 195 號 53 館 236 室 生醫所 健康樂活與智慧醫療照護聯盟秘書處<br>
-        <b>電子郵件：</b>SmartMedHealth@itri.org.tw ／ itriahmci@gmail.com
-      </div>
-    </div>
+  <div class="form-shell">
+    <div class="form-shell-title">請於下方表單完成填寫並送出，資料將直接送至聯盟秘書處。</div>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfmtKxwq3vDrloZFSGNYRkOmw9lGMGqi8Ejpu7P1vik0rffoQ/viewform?embedded=true" width="640" height="2322" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
   </div>
 
   <footer>
     健康樂活與智慧醫療照護聯盟秘書處　｜　工業技術研究院代理維運
   </footer>
+
 </div>
-
-<!-- Hidden iframe target so the Google Forms POST does not navigate this page away -->
-<iframe name="hiddenSubmitFrame" style="display:none;"></iframe>
-
-<script>
-/*
-  ────────────────────────────────────────────────────────────────
-  串接真正的 Google 表單（選用）
-  ────────────────────────────────────────────────────────────────
-  Google 表單的每個題目都有一組由 Google 系統產生的欄位代碼（entry.xxxxxxxxx），
-  這組代碼只會出現在表單本身的原始 HTML/JS 中，無法從表單外部反推取得。
-
-  若您想讓這個頁面填寫的資料「直接送進」您原本的 Google 表單，取得代碼最簡單的方法：
-  1. 開啟您的 Google 表單編輯畫面 → 右上角「⋮」→「取得預先填入的連結」
-  2. 每一題隨意填入一個測試值，按「取得連結」
-  3. 複製產生的網址，網址中會像這樣：
-     .../viewform?usp=pp_url&entry.111111111=測試公司&entry.222222222=測試地址...
-  4. 把每個 entry.xxxxxxxxx 對應填入下方 FIELD_TO_ENTRY 物件即可。
-
-  在您提供這些代碼之前，本頁會先以「電子郵件」方式送出申請內容給秘書處信箱，
-  資料不會遺失，只是還沒有自動寫入 Google 試算表而已。
-*/
-const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSfmtKxwq3vDrloZFSGNYRkOmw9lGMGqi8Ejpu7P1vik0rffoQ/formResponse";
-const FIELD_TO_ENTRY = {
-  ackRead:        "entry.2122638878",
-  tier:           "entry.708329797",
-  companyName:    "entry.207982346",
-  taxId:          "entry.1329910852",
-  ceoName:        "entry.1747621332",
-  companyAddress: "entry.1064133465",
-  contactName:    "entry.661666977",
-  contactTitle:   "entry.996572066",
-  contactEmail:   "entry.156758224",
-  contactMobile:  "entry.1473351263",
-  contactLine:    "entry.261750630",
-  contactPhone:   "entry.1702911331",
-  ackConfirm:     "entry.1873390883"
-};
-
-const FALLBACK_EMAIL = "SmartMedHealth@itri.org.tw";
-
-const totalSteps = 5;
-let current = 1;
-
-const form = document.getElementById('joinForm');
-const panels = document.querySelectorAll('.panel[data-panel]');
-const progressSteps = document.querySelectorAll('.progress .step');
-const backBtn = document.getElementById('backBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-function showStep(n) {
-  panels.forEach(p => p.classList.toggle('active', Number(p.dataset.panel) === n));
-  progressSteps.forEach(s => {
-    const idx = Number(s.dataset.step);
-    s.classList.toggle('active', idx === n);
-    s.classList.toggle('done', idx < n);
-  });
-  backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-  nextBtn.textContent = n === totalSteps ? '送出申請' : '下一步';
-  if (n === totalSteps) buildReview();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  current = n;
-}
-
-function validateStep(n) {
-  let valid = true;
-  const panel = document.querySelector(`.panel[data-panel="${n}"]`);
-
-  if (n === 1) {
-    const box = document.getElementById('ackRead');
-    const field = box.closest('.field');
-    field.classList.toggle('invalid', !box.checked);
-    if (!box.checked) valid = false;
-  }
-
-  if (n === 2) {
-    const checked = panel.querySelector('input[name="tier"]:checked');
-    const field = panel.querySelector('.field');
-    field.classList.toggle('invalid', !checked);
-    if (!checked) valid = false;
-  }
-
-  if (n === 3 || n === 4) {
-    panel.querySelectorAll('input[required]').forEach(input => {
-      const field = input.closest('.field');
-      let ok = input.value.trim().length > 0;
-      if (input.type === 'email' && ok) {
-        ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
-      }
-      field.classList.toggle('invalid', !ok);
-      if (!ok) valid = false;
-    });
-  }
-
-  if (n === 5) {
-    const box = document.getElementById('ackConfirm');
-    const field = box.closest('.field');
-    field.classList.toggle('invalid', !box.checked);
-    if (!box.checked) valid = false;
-  }
-
-  return valid;
-}
-
-const TIER_DISPLAY_LABELS = {
-  "我們要參加健康樂活與智慧醫療照護聯盟成為金讚會員": "金讚會員（30 萬元／年）",
-  "我們要參加健康樂活與智慧醫療照護聯盟成為同樂會員": "同樂會員（1 萬元／年）",
-  "我們還想瞭解更多才能決定，請與我們聯絡": "需要進一步了解，請秘書處聯絡"
-};
-
-function buildReview() {
-  const data = collectData();
-  const rows = [
-    ['會員方案', TIER_DISPLAY_LABELS[data.tier] || data.tier],
-    ['企業名稱', data.companyName],
-    ['公司統編', data.taxId],
-    ['企業負責人', data.ceoName],
-    ['營業處地址', data.companyAddress],
-    ['聯絡人姓名', data.contactName],
-    ['聯絡人職稱', data.contactTitle],
-    ['聯絡人 Email', data.contactEmail],
-    ['聯絡人手機', data.contactMobile],
-    ['聯絡人 LINE ID', data.contactLine],
-    ['聯絡人公司電話', data.contactPhone]
-  ];
-  document.getElementById('reviewList').innerHTML = rows.map(([k, v]) =>
-    `<div class="review-row"><div class="k">${k}</div><div class="v">${escapeHtml(v || '—')}</div></div>`
-  ).join('');
-}
-
-function collectData() {
-  const fd = new FormData(form);
-  const data = {};
-  ['companyName','taxId','ceoName','companyAddress','contactName','contactTitle','contactEmail','contactMobile','contactLine','contactPhone'].forEach(k => {
-    data[k] = (fd.get(k) || '').toString().trim();
-  });
-  data.tier = fd.get('tier') || '';
-  const ackReadBox = document.getElementById('ackRead');
-  const ackConfirmBox = document.getElementById('ackConfirm');
-  data.ackRead = ackReadBox.checked ? ackReadBox.value : '';
-  data.ackConfirm = ackConfirmBox.checked ? ackConfirmBox.value : '';
-  return data;
-}
-
-function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
-}
-
-async function submitToGoogleForm(data) {
-  const hasEntries = GOOGLE_FORM_ACTION && Object.values(FIELD_TO_ENTRY).every(v => v);
-  if (!hasEntries) return false;
-
-  const params = new URLSearchParams();
-  Object.entries(FIELD_TO_ENTRY).forEach(([key, entry]) => {
-    params.append(entry, data[key] || '');
-  });
-
-  try {
-    // Google Forms 不會回傳可讀取的 CORS 回應，用 no-cors 模式送出即可，
-    // 只要 fetch 沒有拋出例外，就代表請求已經送達 Google 的伺服器。
-    await fetch(GOOGLE_FORM_ACTION, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: params.toString()
-    });
-    return true;
-  } catch (err) {
-    console.error('送出至 Google 表單失敗:', err);
-    return false;
-  }
-}
-
-function submitViaEmail(data) {
-  const subject = encodeURIComponent(`入會申請：${data.companyName || ''}`);
-  const bodyLines = [
-    `會員方案：${data.tier}`,
-    `企業名稱：${data.companyName}`,
-    `公司統編：${data.taxId}`,
-    `企業負責人：${data.ceoName}`,
-    `營業處地址：${data.companyAddress}`,
-    `聯絡人姓名：${data.contactName}`,
-    `聯絡人職稱：${data.contactTitle}`,
-    `聯絡人 Email：${data.contactEmail}`,
-    `聯絡人手機：${data.contactMobile}`,
-    `聯絡人 LINE ID：${data.contactLine}`,
-    `聯絡人公司電話：${data.contactPhone}`
-  ];
-  const body = encodeURIComponent(bodyLines.join('\n'));
-  window.open(`mailto:${FALLBACK_EMAIL}?subject=${subject}&body=${body}`, '_blank');
-}
-
-nextBtn.addEventListener('click', async () => {
-  if (!validateStep(current)) return;
-
-  if (current < totalSteps) {
-    showStep(current + 1);
-    return;
-  }
-
-  // final submit
-  nextBtn.disabled = true;
-  nextBtn.textContent = '送出中…';
-  const data = collectData();
-  const wentToGoogle = await submitToGoogleForm(data);
-  form.style.display = 'none';
-  document.getElementById('successPanel').style.display = 'block';
-  if (!wentToGoogle) {
-    submitViaEmail(data);
-  }
-});
-
-backBtn.addEventListener('click', () => {
-  if (current > 1) showStep(current - 1);
-});
-
-document.querySelectorAll('.tier-option').forEach(opt => {
-  opt.addEventListener('click', () => {
-    document.querySelectorAll('.tier-option').forEach(o => o.classList.remove('selected'));
-    opt.classList.add('selected');
-    opt.querySelector('input[type="radio"]').checked = true;
-  });
-});
-
-document.querySelectorAll('.field input').forEach(input => {
-  input.addEventListener('input', () => {
-    input.closest('.field')?.classList.remove('invalid');
-  });
-  input.addEventListener('change', () => {
-    input.closest('.field')?.classList.remove('invalid');
-  });
-});
-
-showStep(1);
-</script>
 
 </body>
 </html>
